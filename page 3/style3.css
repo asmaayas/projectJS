@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+}
+#loginForm
+{
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin-top:150px;
+text-align: center;
+}

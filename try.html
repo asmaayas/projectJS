@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+p {
+  display: inline;
+  font-size: 40px;
+  margin-top: 0px;
+}
+</style>
+</head>
+<body>
+    <p id="days"></p>
+    <p id="hours"></p>
+    <p id="mins"></p>
+    <p id="secs"></p>
+    <h2 id="end"></h2>
+    <script>
+    // The data/time we want to countdown to
+    var countDownDate = new Date("Jul 25, 2021 16:37:52").getTime();
+
+    // Run myfunc every second
+    var myfunc = setInterval(function() {
+
+    var now = new Date().getTime();
+    var timeleft = countDownDate - now;
+        
+    // Calculating the days, hours, minutes and seconds left
+    var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+        
+    // Result is output to the specific element
+    document.getElementById("days").innerHTML = days + "d "
+    document.getElementById("hours").innerHTML = hours + "h " 
+    document.getElementById("mins").innerHTML = minutes + "m " 
+    document.getElementById("secs").innerHTML = seconds + "s " 
+        
+    // Display the message when countdown is over
+    if (timeleft < 0) {
+        clearInterval(myfunc);
+        document.getElementById("days").innerHTML = ""
+        document.getElementById("hours").innerHTML = "" 
+        document.getElementById("mins").innerHTML = ""
+        document.getElementById("secs").innerHTML = ""
+        document.getElementById("end").innerHTML = "TIME UP!!";
+    }
+    }, 1000);
+    </script>
+</body>
+</html>
+<!-- https://www.educative.io/edpresso/how-to-create-a-countdown-timer-using-javascript -->
+
+
+
+
+<!-- function checkAll(firstName, lastName, Email, conEmail, password, conpassword) {
+
+
+
+  //email id expression cod
+  let letters = /[A-Za-z]+$/;
+  let filter = /([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=(.*[\d]){2,})[A-Za-z\d?]{8,32}$/;
+  let num = /[\d]{2,}/;
+  let capital = /[A-Z]/;
+  let symboles = /[#$@!%&*?]/;
+
+
+  if (firstName == '') {
+      document.getElementById('one').style.display = 'inline';
+      document.getElementById('two').style.display = 'block';
+  }
+  else if (!letters.test(firstName)) {
+      document.getElementById('two').style.display = 'inline';
+      document.getElementById('e1').innerHTML = 'name field required only alphabet characters';
+  }
+
+
+  if (lastName == '') {
+      document.getElementById('three').style.display = 'inline';
+      document.getElementById('four').style.display = 'block';
+  }
+  else if (!letters.test(lastName)) {
+      document.getElementById('three').style.display = 'inline';
+      document.getElementById('e4').innerHTML = 'name field required only alphabet characters';
+  }
+
+
+
+  if (Email == '') {
+      document.getElementById('five').style.display = 'inline';
+      document.getElementById('six').style.display = 'block';
+  }
+
+  else if (!filter.test(Email)) {
+      document.getElementById('five').style.display = 'inline';
+      document.getElementById('e2').innerHTML = 'Invalid email,, EX:aS_23.@example.com';
+  }
+
+
+  if (conEmail != Email) {
+      document.getElementById('seven').style.display = 'inline';
+      document.getElementById('eight').style.display = 'block';
+  }
+
+
+
+
+
+  if (password== '') {
+      document.getElementById('nighn').style.display = 'inline';
+      document.getElementById('ten').style.display = 'block';
+  }
+
+  if (password != conpassword) {
+      document.getElementById('oneO').style.display = 'inline';
+      document.getElementById('twoT').style.display = 'block';
+  }
+  checkPassword(password)
+
+} -->

@@ -14,3 +14,11 @@
     .div6 { grid-area: 9 / 2 / 10 / 4; }
     .div7 { grid-area: 10 / 2 / 12 / 4; }
     .div8 { grid-area: 10 / 5 / 12 / 7; }
+
+    body.correct{
+        background-color: red;
+    }
+    body.wrong{
+        background-color: greenyellow;
+    }
+ 
