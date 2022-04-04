@@ -1,7 +1,7 @@
 *{
     box-sizing: border-box;
     font-family: 'Encode Sans', sans-serif;
-    font-family: 'Titillium Web', sans-serif
+    font-family: 'Titillium Web', sans-serif;
 }
 body {
 
@@ -145,4 +145,9 @@ right: 0;
 text-align: center;
 font-size: larger;
 }
- 
+
+#welc{
+font-size: 5vw;
+}
+
+

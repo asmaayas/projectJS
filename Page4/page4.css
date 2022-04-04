@@ -9,6 +9,10 @@ body
         background-color: #F5F5F5;
         height: 1200px;
 }
+*{
+    font-family: 'Encode Sans', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+}
 #welcome
 {
     font-size:  5vw;;
@@ -65,7 +69,7 @@ body
         width: 400px;
         height: 50px;
         background-color: rgba(211, 155, 0, 0);
-        border: 5px tan solid;
+        border: 5px #FDB827 solid;
         border-radius: 2%;
         display: none;
     }

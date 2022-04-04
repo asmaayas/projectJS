@@ -13,6 +13,9 @@ function getinfofromlocal(){
     console.log(userinfoObj[0].password);
     
     console.log(passsword.value);
+
+    // document.getElementById('twoT').style.display='';
+    // document.getElementById('two').style.display=''
     
     if(userinfoObj[0].password == passsword.value)
     {

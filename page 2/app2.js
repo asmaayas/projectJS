@@ -54,6 +54,7 @@ function handleSubmit(event) {
     let password = event.target.password.value;
     let conpassword = event.target.conpassword.value;
     let topic = event.target.topic.value;
+    console.log(topic , "thisistopic");
 
     new User(firstName, lastName, Email, conEmail, password, conpassword,topic);
     

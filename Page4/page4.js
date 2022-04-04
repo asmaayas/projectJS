@@ -190,12 +190,7 @@ function setquestions()
     }
 }
 setquestions()
-
-
-
-
-
-    
+   
 
 let answersarr = [];
 let choosedanswer = 0;
