@@ -12,7 +12,7 @@
     <nav id="navid">
 <img src="../img/greenlogo.png" alt="" id="logo">
 
-
+<button id="logoutbutton"  onclick="logout()">Logout</button>
     </nav>
     <div id="div1">
        <!-- <p id="resulttext"><span id="username"></span> <span id="textnext"></span> </p>  -->
@@ -22,29 +22,25 @@
     </div>
 
     <div id="btndiv">
-    <button id="showanswersbtn" onmouseover="style2rcolor()" onmouseleave="noborder()">Show Answers</button>
+    <button id="showanswersbtn" onmouseover="style2rcolor()" onmouseleave="noborder()" onclick="display()">Show Answers</button>
 </div>
+<div id="tblecontainer">  
 <table id="table" class="tablestyle">
-    <thead>
-        <tr>
+    <thead >
+        <tr id="headtable">
             <td>Question</td>
             <td>CorrectAnswer</td>
             <td>YourAnswer</td>
         </tr>
     </thead>
     <tbody id="tbody">
-        <tr>
-            <td>Dom</td>
-            <td>6000</td>
-        </tr>
-        <tr >
-            <td>Melissa</td>
-            <td>5150</td>
-        </tr>
+        
         <!-- and so on... -->
     </tbody>
+   
 
 </table>
+</div>
 </body>
 <script src="./page5.js"></script>
 </html>

@@ -97,7 +97,7 @@ width: 15%;
 	 width: 100%;
  }
  .inp{
-	 width: 70%;
+	 width: 90%;
 	 height: 60px;
  }
 
@@ -110,3 +110,10 @@ width: 15%;
  #reg{
 	 font-size:xx-large;
  }
+
+
+ @media only screen and (max-width: 600px) {
+	#regform {
+	  width: 90%;
+	}
+  }

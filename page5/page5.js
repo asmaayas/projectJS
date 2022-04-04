@@ -4,6 +4,7 @@ let showansbtn = document.getElementById("showanswersbtn");
 let ruslt = document.getElementById('passtest');
 let table = document.getElementById('table');
 let tablebody = document.getElementById('tbody');
+let thead = document.getElementById('headtable');
 
 
 /////////////////getdata
@@ -52,12 +53,12 @@ let htmlquestion = [
       2 : "	&#60th6>",
       3 : "	&#60theading>",
    },  
-   {
-    question : ` `,
-   1 : "	",
-   2 : "	",
-   3 : "	",
-},
+//    {
+//     question : ` `,
+//    1 : "	",
+//    2 : "	",
+//    3 : "	",
+// },
    ]
    let Cssquestion = [
        {
@@ -93,12 +94,12 @@ let htmlquestion = [
          2 : "	font-weight",
          3 : "	text-transform",
       },
-      {
-        question : ` `,
-       1 : "	",
-       2 : "	",
-       3 : "	",
-    },
+    //   {
+    //     question : ` `,
+    //    1 : "	",
+    //    2 : "	",
+    //    3 : "	",
+    // },
       
       
       ]
@@ -137,12 +138,12 @@ let htmlquestion = [
          2 : "	2",
          3 : "	0",
       },
-      {
-        question : ` `,
-       1 : "	",
-       2 : "	",
-       3 : "	",
-    },  
+    //   {
+    //     question : ` `,
+    //    1 : "	",
+    //    2 : "	",
+    //    3 : "	",
+    // },  
       
       ]
 
@@ -159,11 +160,11 @@ function getdatafrom() {
 
 
     if (Number(correct) >= Number(worng)) {
-        document.getElementById('div1').innerHTML = `Congratulations <span id='username'> ${user.slice(1)} </span> You Pass`;
-        document.getElementById('username').style.color = '#79D70F';
+        document.getElementById('div1').innerHTML = `Congratulations <span id='username'> ${user.slice(1)} </span> You Passed`;
+        document.getElementById('username').style.color = '#009879';
         document.getElementById('logo').src = '../img/greenlogo.png';
-       
-        ruslt.style.color='#79D70F'
+        thead.style.background = '#009879'
+        ruslt.style.color='#009879'
 
 
 
@@ -173,9 +174,10 @@ function getdatafrom() {
 
 
     } else {
-        document.getElementById('div1').innerHTML = `Unfortunately <span id='username'> ${user.slice(1)} </span> You Fall`;
+        document.getElementById('div1').innerHTML = `Unfortunately <span id='username'> ${user.slice(1)} </span> You Failed`;
         document.getElementById('username').style.color = 'red';
         document.getElementById('logo').src = '../img/redlogo.png';
+        thead.style.background= 'red'
         ruslt.style.color='red'
 
 
@@ -219,6 +221,13 @@ function noborder() {
 
 function gettabledata()
 {
+    let Wansweroption= localStorage.getItem('userwrongans'); ///whice choice was wrong
+    let WansweroptionObj= JSON.parse(Wansweroption);
+    let useranswerstr = localStorage.getItem('useranswer');
+    let useranswers = JSON.parse(useranswerstr);
+    
+
+    ///////
     let topic  = localStorage.getItem('topic');
     let topicobj = JSON.parse(topic)
     let htmlcorrect  = localStorage.getItem('htmlanswers');
@@ -249,31 +258,49 @@ function gettabledata()
         correctansw = jsanswers
     }
 
-    console.log(showanswers);
+    console.log(showanswers,'dyar');
 
+    showanswers.map((a,i)=>{
+    
     let trow = document.createElement("tr");
     let td = document.createElement("td");
     let td1 = document.createElement("td");
     let td2 = document.createElement("td");
-    tablebody.appendChild(trow)
-    trow.appendChild(td)
-    trow.appendChild(td1)
-    trow.appendChild(td2)
-    td.innerHTML = `${showanswers[0].question} <br>
-     1.${showanswers[0][1]} 2.${showanswers[0][2]}  3.${showanswers[0][3]} `
-    td1.innerHTML = showanswers[0][correctansw[0]]
-    
-    td2.innerHTML = worng[0]
+    tablebody.appendChild(trow);
+    trow.appendChild(td);
+    trow.appendChild(td1);
+    trow.appendChild(td2);
+    td.innerHTML = `${a.question} <br> 1. ${a[1]} <br>  2. ${a[2]} <br>  3.${a[3]}`
+    td1.innerHTML = a[correctansw[i]];
+    td2.innerHTML = a[useranswers[i]]
+    if(correctansw[i] != useranswers[i])
+    {
+        trow.style.color = "red"
+        trow.style.borderLeft = "red 1px solid";
+    }
 
     
-
-   
-
+    })
     
 
-
+ 
 
 
 
 }
 gettabledata()
+
+
+function logout()
+{
+    setTimeout(() => {
+       window.location.href = "../index.html"; 
+    }, 1000);
+    
+}
+
+
+
+function display(){
+table.style.display='inline-block'
+}

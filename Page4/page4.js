@@ -172,19 +172,19 @@ function setquestions()
     {
         choosedtopicarr = htmlquestion;
         topiccorrectanswers = htmlanswersarr;
-        qimg.src = "../img/html-1.jpg";
+        qimg.src = '../img/html-1.jpg';
     }
     else if (topic == 'CSS')
     {
         choosedtopicarr = Cssquestion;
         topiccorrectanswers = cssanswersarr;
-        qimg.src = "../img/JS.png";
+        qimg.src = "../img/CSS.png";
     }
     else if (topic == 'JS')
     {
         choosedtopicarr = JSquestion;
         topiccorrectanswers = jsanswersarr;
-        qimg.src = "../img/learn-css.png";
+        qimg.src = "../img/js.png";
         console.log(topiccorrectanswers);
         console.log(choosedtopicarr);
     }
@@ -349,6 +349,8 @@ function gotoresultpg()
     localStorage.setItem("userwrongansnum" , wrongansertolocal)
     let userwrongansers = JSON.stringify(userwrongansw)
     localStorage.setItem("userwrongans" , userwrongansers)
+    let useranswer= JSON.stringify(answersarr);
+    localStorage.setItem('useranswer', useranswer);
 
 
 }
