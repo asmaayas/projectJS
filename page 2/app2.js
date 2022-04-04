@@ -33,12 +33,12 @@ function User(firstName, lastName, Email, conEmail, password, conpassword,topic)
     this.topic= topic;
 
 
-    arry=[];
+    
     if (this.checkFN && this.checkLN && this.checkE && this.checkCE && this.checkP && this.checkCP ){
 
         arry.push(this);
         storeInLocalStorage();
-        document.getElementById('butt').href='../try.html'
+        document.getElementById('butt').href='../page 3/loginpage.html';
     }
     
 

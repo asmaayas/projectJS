@@ -2,6 +2,8 @@ let email = document.getElementById('email');
 let passsword = document.getElementById("password")
 
 function getinfofromlocal(){
+   
+
     let userinfo=localStorage.getItem(email.value);
     console.log(userinfo);
     if(userinfo)
@@ -15,16 +17,23 @@ function getinfofromlocal(){
     if(userinfoObj[0].password == passsword.value)
     {
         let storeTopic= userinfoObj[0].topic;
-        
-        // window.location.href = "../Project-2/Questionpage.html"
+        let storeName= userinfoObj[0].firstName;
+        document.getElementById('butt2').href='../Page4/Page4.html';
         let storTopicSt= JSON.stringify(storeTopic);
-        localStorage.setItem('topic',storTopicSt)
+        let storeNameSt= JSON.stringify(storeName);
+        localStorage.setItem('topic',storTopicSt);
+        localStorage.setItem('name',storeNameSt)
         console.log(storTopicSt);
 
+    }else
+    {
+        document.getElementById('twoT').style.display='inline';
+        document.getElementById('two').style.display='block';
     }
     }
     else
     {
-        console.log("incorrect email");
+        document.getElementById('oneO').style.display='inline';
+        document.getElementById('one').style.display='block';
     }
 }

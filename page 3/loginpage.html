@@ -5,28 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans&family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style3.css">
 </head>
 <body>
    
     <form action="" method="get" id="loginForm">
-        <p id="piclogo">log</p>
-        <h1 id="logo">Coding For Life</h1>
+        <img src="../img/logo.png" alt="" id="piclogo">
+        <h1 id="logo"><span id="code"> Coding </span> For Life</h1>
     <div class="field-group">
         <label for="email">Enter Your Email</label>
-        <input type="email" id="email" name="email" required="true">
+        <input type="email" id="email" name="email" required="true" placeholder="Enter Your Email">
         <img src="./icon-error.svg" class="error-icon" alt="error"  id="oneO">
-        <p class="error-text"  id="one"></p>               
+        <p class="error-text"  id="one">Invalid email</p>               
       </div>
       <div class="field-group">
         <label for="email">Enter Your Password</label>
-        <input type="password" id="password" name="password" required="true">
-        <img src="./icon-error.svg" class="error-icon" alt="error"  id="oneO">
-        <p class="error-text"  id="twoT"></p>               
+        <input type="password" id="password" name="password" required="true" placeholder="Enter Your Password">
+      
+        <img src="./icon-error.svg" class="error-icon" alt="error"  id="twoT">
+        <p class="error-text"  id="two">wrong password</p>               
       </div>
-    <button>Log In</button>
+    <button type="button" onclick="getinfofromlocal()"><a id="butt2" > Log In</a></button>
     </form>
-    
+     <footer>
+       <div></div>
+     </footer>
 </body>
 <script src="app3.js"></script>
 </html>

@@ -1,24 +1,148 @@
-.parent {
+*{
+    box-sizing: border-box;
+    font-family: 'Encode Sans', sans-serif;
+    font-family: 'Titillium Web', sans-serif
+}
+body {
+
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    }
-    
-    .div1 { grid-area: 1 / 1 / 2 / 12; }
-    .div2 { grid-area: 1 / 12 / 2 / 13; }
-    .div3 { grid-area: 2 / 2 / 3 / 9; }
-    .div4 { grid-area: 6 / 2 / 9 / 7; }
-    .div5 { grid-area: 4 / 7 / 10 / 12; }
-    .div6 { grid-area: 9 / 2 / 10 / 4; }
-    .div7 { grid-area: 10 / 2 / 12 / 4; }
-    .div8 { grid-area: 10 / 5 / 12 / 7; }
+    background-color: rgb(244, 244, 244);
 
-    body.correct{
-        background-color: red;
-    }
-    body.wrong{
-        background-color: greenyellow;
-    }
+}
+
+#page1nav {
+    grid-area: 1 / 1 / 2 / 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100px;
+
+}
+
+#mainpage1 {
+    grid-area: 3 / 1 / 6 / 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size:medium;
+
+}
+
+#bigimage {
+    position: relative; 
+    top: -110px;
+    width: 500px;
+    height: 450px;
+    margin-left: -100px;
+    border-radius: 180px;
+transform: rotate(-0.24deg);
+background-color: #FDB827;
+display: flex;
+align-content: center;
+justify-content: center;
+    margin-left: 2%;
+    
+    
+}
+
+#manlike
+{
+    position: relative;
+    top: -20%;
+    left: 7%;
+    width: 65%;
+    height: 120%;
+
+}
+
+.button {
+border-radius: 4px;
+background-color: #ffffff;
+border: 1px #FDB827 solid;
+border: none;
+color: #FDB827;
+text-align: center;
+font-size: 28px;
+padding: 10px;
+width: 150px;
+transition: all 0.5s;
+cursor: pointer;
+margin: 15%;
+}
+
+.button span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+
+.button span:after {
+content: '\00bb';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
+}
+
+.button:hover span {
+padding-right: 25px;
+}
+
+.button:hover span:after {
+opacity: 1;
+right: 0;
+}
+
+.button2 {
+border-radius: 4px;
+background-color: #FDB827;
+border: none;
+color: #fffffffe;
+text-align: center;
+font-size: 28px;
+padding: 5px;
+width: 150px;
+transition: all 0.5s;
+cursor: pointer;
+margin: 5px;
+}
+
+
+.button2 span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+
+.button2 span:after {
+content: '\00bb';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
+}
+
+.button2:hover span {
+padding-right: 25px;
+}
+
+.button2:hover span:after {
+opacity: 1;
+right: 0;
+}
+
+
+
+#h1 {
+text-align: center;
+font-size: larger;
+}
  
