@@ -388,3 +388,8 @@ setInterval(() => {
 
     }  
 }, 1000);
+
+function gotonextpage()
+{
+    window.location.href="../page5/page5.html";
+}

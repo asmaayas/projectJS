@@ -7,34 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans&family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f32d43040b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./Page4.css">
 </head>
-<style>
-    
-
-    
-    /* #question
-    {
-        height: 50px;
-        width: 650px;
-        background-color: green;
-        margin-bottom: 50px;
-    } */
-    /* .qchoices
-    {
-        
-    } */
-    
-    
-   
-    
-    
-    
-</style>
 
 <body>
     <nav id="page2nav">
         <p><span id="welcome">Welcome </span> <span id="username"> </span></p>
+       
         <img id="logo" src="../img/logo.png"
             alt="">
 
@@ -50,12 +30,13 @@
         <div class="qchoices"> </div>
         <div class="qchoices"> </div>
         <button id="nextquestion">
+            <i class="fa-solid fa-angle-right"></i>
             <span class="tooltiptext">Next button</span>
         </button>
     </div>
     <div>
-        <button  id="resultsbutton">
-            <a href="../page5/page5.html">Results</a>
+        <button onclick="gotonextpage()" id="resultsbutton">
+            Result
         </button>
     </div>
     

@@ -15,7 +15,8 @@ flex-direction: column;
 justify-content: center;
 margin-top:150px;
 text-align: center;
-position: relative;
+/* position: relative;
+right: 10%; */
 
 }
 .error-icon, .error-text{
@@ -24,20 +25,26 @@ position: relative;
 
 #piclogo {
 
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center; */
     height: 125px;
+    width: 110%;
            
 }
 
 
     input {
-    font-size: 10px;
-    line-height: 4;
-    width: 300px;
+    font-size: medium;
+    line-height: 3;
+    width: 340px;
     border: 1px solid orange;
     text-align: center;
+}
+input::placeholder
+{
+    font-size: medium;
+    color: rgba(0, 0, 0, 0.678);
 }
 button{
     border: none;
@@ -48,8 +55,9 @@ button{
     margin-right: 25%;
     text-align: center; 
 }
-/* @media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 600px) {
 	#regform {
 	  width: 90%;
 	}
-  } */
+  }

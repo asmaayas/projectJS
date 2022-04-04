@@ -21,7 +21,7 @@ function getinfofromlocal(){
     {
         let storeTopic= userinfoObj[0].topic;
         let storeName= userinfoObj[0].firstName;
-        document.getElementById('butt2').href='../Page4/Page4.html';
+        window.location.href='../Page4/Page4.html';
         let storTopicSt= JSON.stringify(storeTopic);
         let storeNameSt= JSON.stringify(storeName);
         localStorage.setItem('topic',storTopicSt);
