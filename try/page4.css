@@ -1,0 +1,232 @@
+body
+{
+   
+   /* display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 20px; */
+        background-color: #F5F5F5;
+        height: 1200px;
+}
+*{
+    font-family: 'Encode Sans', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+}
+#welcome
+{
+    font-size:  5vw;;
+    font-weight: bold;
+}
+#logo
+{
+    margin: 1%;
+    width: 100px;
+    height: 100px;
+}
+#username
+{
+    color: #FDB827;
+    font-size: 4vw;
+}
+#page2nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+#questionsimg {
+    display: flex;
+    justify-content: center;
+    
+}
+#qimg
+{
+   height: 300px;
+    width: 40%;
+    margin-bottom: 40px;
+}
+#questionsdiv
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#answers
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+}
+#resultsbutton
+    {
+        width: 400px;
+        height: 50px;
+        background-color: rgba(211, 155, 0, 0);
+        border: 5px #FDB827 solid;
+        border-radius: 2%;
+        display: none;
+    }
+    #resultsbutton:hover
+    {
+
+        background-color: rgba(211, 155, 0, 0.242);
+    }
+    #timer
+    {
+        grid-area: 4 / 1 / 5 / 3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #timercounter
+    {
+        width: 232px;
+     height: 71px;
+     border: 4px Solid #FDB827;
+
+    }
+    #timercounter
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+          font-weight: bold;
+    }
+
+
+
+#question
+{
+    height: 50px;
+        width: 70%;
+        margin-bottom: 50px;
+        background-color: #FDB827;
+        border-radius: 15px;
+        border: black 2px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    
+}
+.qchoices
+{
+    display: flex;
+        border: 1px #FDB827 solid;
+        background-color: white;
+        border-radius: 5px;
+        height: 120px;
+        width: 300px;
+        margin-bottom: 50px;
+        margin: 2%;
+        justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.qchoices:hover
+{
+    box-shadow: 2px 2px  2px  #FDB827;
+}
+
+#nextquestion
+{
+    height: 300px; 
+    width: 40px;
+    background-color: white;
+    border-radius: 200px;
+    border: 0.1px solid #FDB827;
+   position: relative;
+    display: inline-block;
+}
+#nextquestion .tooltiptext
+{
+    visibility: hidden;
+    width: 80px;
+    background-color: #FDB827;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+
+}
+
+#nextquestion:hover
+{
+    background-color: #f5f5f5 ;
+    
+} 
+/* Show the tooltip text when you mouse over the tooltip container */
+  #nextquestion:hover .tooltiptext {
+    visibility: visible;
+  }
+
+#resultsbutton
+{
+    height: 80px; 
+    width: 300px;
+    background-color: white;
+    border-radius: 200px;
+   margin-bottom:50px;
+   margin-top: 50px;
+   font-size:20px;
+   font-weight: bold;
+
+}
+#resultsbutton:hover
+{
+    background-color: rgb(224, 224, 224) ;
+    
+}
+#timercounter
+{
+    box-shadow: 0px 5px 2px  rgba(140, 140, 140, 0.619);
+}
+
+@media only screen and (max-width: 400px) {
+    #page2nav {
+      flex-direction: row;
+    }
+    #welcome{
+        font-size: 30px;
+    }
+    #username{
+        font-size: 50px;
+    }
+  }
+  @media only screen and (max-width: 900px)
+  {
+    #answers
+    {
+        flex-direction: column;
+    }
+    #nextquestion
+    {
+        height: 50px;
+        width : 300px;
+        margin: 5%
+        
+    }
+    .qchoices
+    {
+        width:150px;
+        font-size:small
+    }
+    #resultsbutton
+    {
+        width:200px;
+    }
+
+  }

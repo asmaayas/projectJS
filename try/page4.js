@@ -360,8 +360,8 @@ function gotoresultpg()
 
 
 //////////timer
-let mins = 0;
-let secs = 10;
+let mins = 9;
+let secs = 59;
 setInterval(() => {
     timercounter.innerHTML = mins + ":" + secs;
     if(secs == 0)

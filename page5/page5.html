@@ -25,7 +25,7 @@
     <button id="showanswersbtn" onmouseover="style2rcolor()" onmouseleave="noborder()" onclick="display()">Show Answers</button>
 </div>
 <div id="tblecontainer">  
-<table id="table" class="tablestyle">
+<!-- <table id="table" class="tablestyle">
     <thead >
         <tr id="headtable">
             <td>Question</td>
@@ -33,13 +33,21 @@
             <td>YourAnswer</td>
         </tr>
     </thead>
-    <tbody id="tbody">
+    <tbody id="tbody"> -->
         
         <!-- and so on... -->
-    </tbody>
+    <!-- </tbody> -->
+<ol id="table" class="tablestyle">
+    <li id="headtable">
+       
+        <li>Question</li>
+        <li>CorrectAnswer</li>
+        <li>YourAnswer</li>
+    </li>
    
-
-</table>
+    <li id="tbody"></li>
+</ol>
+<!-- </table> -->
 </div>
 </body>
 <script src="./page5.js"></script>

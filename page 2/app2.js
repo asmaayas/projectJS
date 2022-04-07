@@ -38,7 +38,8 @@ function User(firstName, lastName, Email, conEmail, password, conpassword,topic)
 
         arry.push(this);
         storeInLocalStorage();
-        document.getElementById('butt').href='../page 3/loginpage.html';
+        // document.getElementById('butt').href='../page 3/loginpage.html';
+        window.location.href="../page 3/loginpage.html"
     }
     
 
