@@ -253,14 +253,23 @@ function setinitalquestion()
 }
 setinitalquestion()
 
+function resetchoices()
+{
+    choices[0].style.background = "";
+choices[1].style.background = "";
+choices[2].style.background = "";
+choosedanswer = 0;
 
+}
 
 
 
 nextbutton.addEventListener("click" , setdatatoLstorage)
 function setdatatoLstorage(event)
 {
+   
     setuseranswer()
+    
  
 if(index == choosedtopicarr.length  -2  )
    {
@@ -287,7 +296,8 @@ if(choosedanswer != 0)
    choices[1].innerHTML = nextqvalue.answer2;
    choices[2].innerHTML = nextqvalue.answer3;
 //    setuseranswer()
-   
+////// to reset the choices
+resetchoices();
 }
 }
 function setuseranswer()
@@ -360,17 +370,28 @@ function gotoresultpg()
 
 
 //////////timer
-let mins = 0;
-let secs = 10;
+let mins1 = 0 
+let mins = 9
+let secs1 = 5
+let secs = 9
 setInterval(() => {
-    timercounter.innerHTML = mins + ":" + secs;
-    if(secs == 0)
+    timercounter.innerHTML = "0" + mins + ":" + secs1 + secs;
+    if(secs1 == 0 && secs == 0)
     {
         mins--;
-        secs = 60;
+        secs1 = 5;
+        secs = 9;
+    }
+    if(secs == 0 )
+    {
+        secs1--;
+
+        secs = 10;
+        
+
     }
     secs--;
-    if(mins ==0 && secs == 0 )
+    if(mins ==0 && secs1==0 && secs == 0 )
     {
 
         setTimeout(() => {
@@ -388,6 +409,9 @@ setInterval(() => {
 
     }  
 }, 1000);
+
+
+
 
 function gotonextpage()
 {
