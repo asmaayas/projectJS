@@ -11,23 +11,26 @@
 </head>
 
 <body>
-    <h1 id="logotop"><span id="top"> Coding </span>For Life</h1>
+ 
+    <h2 id="logotop"><span id="top"> Coding </span>For Life</h2>
+   
+  
     <form action="#" id="regform">
         
-      <img src="../img/logo.png" alt="" id="piclogo">
-            <h1 id="reg">Register</h1>
+     
+            <h1 id="reg">Register  <img src="../img/logo.png" alt="" id="piclogo"></h1>
     <div class="field-group">
         <label  for="first-name">First Name</label>
         <input required="true" name='firstName' id="fname" type="text" placeholder="First Name" class="inp">
-        <img src="./icon-error.svg" class="error-icon" id="one" alt="" >
-        <p id="e1" class="erro"></p> 
+        <img src="./icon-error.svg" class="error-icon" id="one" alt=""  >
+        <p id="e1" class="error-text"></p> 
         <p></p>            
       </div>
       <div class="field-group">
         <label for="last-name">last Name</label>
         <input required="true" name='lastName' id="lname" type="text" placeholder="Last Name" class="inp"> 
         <img src="./icon-error.svg" class="error-icon" alt="" id="three">
-        <p id="e4" class="erro"></p>  
+        <p id="e4" class="error-text"></p>  
         <p></p>            
       </div>
       <div class="field-group">
@@ -43,15 +46,15 @@
         <input required="true" name='conEmail' id="cEmail" value="" type="email" placeholder="Confirm Email Address" class="inp">
         <img src="./icon-error.svg" class="error-icon" alt="" id="seven">
         <p class="error-text" id="eight">Email dose not matching</p>   
-        <p class=></p>           
+        <p class=error-text></p>           
       </div>
       <div class="field-group">
         <label for="password">Password </label>
         <input required="true" name='password' id="password" value="" type="password" placeholder="Password" class="inp">
         <img src="./icon-error.svg" class="error-icon" alt="" id="nighn">
-        <p id="e3"></p>
+        <p id="e3" class="error-text"></p>
         <p class="error-text" id="ten">Password cannot be empty</p>  
-        <p ></p>            
+           
       </div>
       <div class="field-group">
         <label for="cpassword">Confirm Password</label>

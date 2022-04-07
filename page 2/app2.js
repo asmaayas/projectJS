@@ -84,7 +84,7 @@ function validateName(a){
         return true;
     }
     else  {
-        document.getElementById('one').style.display = 'inline';
+        document.getElementById('one').style.display = 'block';
         document.getElementById('e1').innerHTML = 'Name field required only alphabet characters';
         return false;
     }
@@ -99,7 +99,7 @@ function validateNamel(a){
         return true;
     }
     else  {
-        document.getElementById('three').style.display = 'inline';
+        document.getElementById('three').style.display = 'block';
         document.getElementById('e4').innerHTML = 'Name field required only alphabet characters';
         return false;
     }
@@ -111,7 +111,7 @@ function validateEmail(a){
         document.getElementById('e2').innerHTML = '';
     let filter = /([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     if (!filter.test(a)) {
-        document.getElementById('five').style.display = 'inline';
+        document.getElementById('five').style.display = 'block';
         document.getElementById('e2').innerHTML = 'Invalid email,, EX:aS_23.@example.com';
         return false;
     }else{
@@ -126,7 +126,7 @@ function validatecEmail(a,b){
     document.getElementById('eight').style.display = 'none';
 if (a != b) {
     console.log(a,b);
-    document.getElementById('seven').style.display = 'inline';
+    document.getElementById('seven').style.display = 'block';
     document.getElementById('eight').style.display = 'block';
     return false;
 }else{
@@ -152,21 +152,21 @@ function checkPassword(password) {
 
     }
     else if ((!capital.test(password[0]))) { //To check from the first letter
-        document.getElementById('nighn').style.display = 'inline';
+        document.getElementById('nighn').style.display = 'block';
         document.getElementById('ten').style.display = 'block';
         document.getElementById('ten').innerHTML = 'first letter must be capital';
         return false;
     }
     else if ((!num.test(password))) {
        
-        document.getElementById('nighn').style.display = 'inline';
+        document.getElementById('nighn').style.display = 'block';
         document.getElementById('ten').style.display = 'block';
         document.getElementById('ten').innerHTML = 'password must contain 2 numbers at least';
         return false;
     }
     else if ((!symboles.test(password))) {
       
-        document.getElementById('nighn').style.display = 'inline';
+        document.getElementById('nighn').style.display = 'block';
         document.getElementById('ten').style.display = 'block';
         document.getElementById('ten').innerHTML = 'password must contain  at least 1 character';
         return false;
@@ -176,7 +176,7 @@ function checkPassword(password) {
         return true;
     } else {
         console.log(`Passwords length must be more than 8 or less than 32`);
-        document.getElementById('nighn').style.display = 'inline';
+        document.getElementById('nighn').style.display = 'block';
         document.getElementById('ten').style.display = 'block';
         document.getElementById('ten').innerHTML = `Passwords length must be more than 8 or less than 32`;
         return false;
@@ -187,7 +187,7 @@ function checkcPassword(a,b){
     document.getElementById('oneO').style.display = 'none';
     document.getElementById('twoT').style.display = 'none';
     if (a != b) {
-        document.getElementById('oneO').style.display = 'inline';
+        document.getElementById('oneO').style.display = 'block';
         document.getElementById('twoT').style.display = 'block';
         return false;
     }else{
