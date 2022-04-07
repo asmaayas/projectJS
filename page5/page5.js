@@ -159,7 +159,7 @@ function getdatafrom() {
     console.log(answarwrongObj);
 
 
-    if (Number(correct) >= Number(worng)) {
+    if (Number(correct) > Number(worng)) {
         document.getElementById('div1').innerHTML = `Congratulations <span id='username'> ${user.slice(1)} </span> You Passed`;
         document.getElementById('username').style.color = '#009879';
         document.getElementById('logo').src = '../img/greenlogo.png';
@@ -187,7 +187,7 @@ function getdatafrom() {
 getdatafrom()
 
 function style1rcolor() {
-    if (Number(correct) >= Number(worng)) {
+    if (Number(correct) > Number(worng)) {
         passtest.style.border = '2px solid #009879';
 
     } else {
@@ -198,7 +198,7 @@ function style1rcolor() {
 
 }
 function style2rcolor() {
-    if (Number(correct) >= Number(worng)) {
+    if (Number(correct) > Number(worng)) {
 
         showansbtn.style.background = '#009879'
     } else {
