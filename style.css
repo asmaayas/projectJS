@@ -5,11 +5,11 @@
 }
 body {
 
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-row-gap: 0px; */
     background-color: rgb(244, 244, 244);
 
 }
@@ -24,7 +24,7 @@ body {
 }
 
 #mainpage1 {
-    grid-area: 3 / 1 / 6 / 3;
+    /* grid-area: 3 / 1 / 5 / 3; */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -71,7 +71,7 @@ padding: 10px;
 width: 150px;
 transition: all 0.5s;
 cursor: pointer;
-margin: 5%;
+margin: 2%;
 }
 
 .button span {
@@ -110,7 +110,7 @@ padding: 10px;
 width: 150px;
 transition: all 0.2s;
 cursor: pointer;
-margin: 5%;
+margin: 2%;
 }
 
 
@@ -142,7 +142,9 @@ right: 0;
 
 
 #h1 {
-text-align: center;
+    
+   margin-left: 7%;
+text-align: left;
 font-size: larger;
 }
 
