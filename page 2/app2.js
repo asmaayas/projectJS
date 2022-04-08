@@ -77,7 +77,7 @@ function handleSubmit(event) {
 
 function validateName(a){
     document.getElementById('one').style.display = 'none';
-    document.getElementById('e1').innerHTML = '';
+    document.getElementById('e1').style.display = 'none';
     let letters = /^(?=.{1,50}$)[a-z]+(?:['_.\s][a-z]+)*$/i;
     if (letters.test(a)) {
         console.log(a);
@@ -85,14 +85,14 @@ function validateName(a){
     }
     else  {
         document.getElementById('one').style.display = 'block';
-        document.getElementById('e1').innerHTML = 'Name field required only alphabet characters';
+        document.getElementById('e1').style.display = 'block';
         return false;
     }
 } 
 //** 
 function validateNamel(a){
     document.getElementById('three').style.display = 'none';
-    document.getElementById('e4').innerHTML = '';
+    document.getElementById('e4').style.display = 'none';
     let letters = /^(?=.{1,50}$)[a-z]+(?:['_.\s][a-z]+)*$/i;
     if (letters.test(a)) {
         console.log(a);
@@ -100,7 +100,7 @@ function validateNamel(a){
     }
     else  {
         document.getElementById('three').style.display = 'block';
-        document.getElementById('e4').innerHTML = 'Name field required only alphabet characters';
+        document.getElementById('e4').style.display = 'block';
         return false;
     }
 }
@@ -108,11 +108,12 @@ function validateNamel(a){
 //** 
 function validateEmail(a){
     document.getElementById('five').style.display = 'none';
-        document.getElementById('e2').innerHTML = '';
+        document.getElementById('e2').style.display = 'none';
+    let filter2= /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
     let filter = /([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    if (!filter.test(a)) {
+    if (!filter2.test(a)) {
         document.getElementById('five').style.display = 'block';
-        document.getElementById('e2').innerHTML = 'Invalid email,, EX:aS_23.@example.com';
+        document.getElementById('e2').style.display = 'block';
         return false;
     }else{
         console.log(a);

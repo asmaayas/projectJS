@@ -262,23 +262,23 @@ function gettabledata()
 
     showanswers.map((a,i)=>{
     
-    // let trow = document.createElement("tr");
-    // let td = document.createElement("td");
-    // let td1 = document.createElement("td");
-    // let td2 = document.createElement("td");
-    // tablebody.appendChild(trow);
-    // trow.appendChild(td);
-    // trow.appendChild(td1);
-    // trow.appendChild(td2);
-
-     let trow = document.createElement("ol");
-    let td = document.createElement("li");
-    let td1 = document.createElement("li");
-    let td2 = document.createElement("li");
+    let trow = document.createElement("tr");
+    let td = document.createElement("td");
+    let td1 = document.createElement("td");
+    let td2 = document.createElement("td");
     tablebody.appendChild(trow);
     trow.appendChild(td);
     trow.appendChild(td1);
     trow.appendChild(td2);
+
+    //  let trow = document.createElement("ol");
+    // let td = document.createElement("li");
+    // let td1 = document.createElement("li");
+    // let td2 = document.createElement("li");
+    // tablebody.appendChild(trow);
+    // trow.appendChild(td);
+    // trow.appendChild(td1);
+    // trow.appendChild(td2);
 
     td.innerHTML = `${a.question} <br> 1. ${a[1]} <br>  2. ${a[2]} <br>  3.${a[3]}`
     td1.innerHTML = a[correctansw[i]];
