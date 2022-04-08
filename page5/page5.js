@@ -165,6 +165,8 @@ function getdatafrom() {
         document.getElementById('logo').src = '../img/greenlogo.png';
         thead.style.background = '#009879'
         ruslt.style.color='#009879'
+        document.getElementsByClassName("tablestyle")
+        
 
 
 
@@ -262,37 +264,41 @@ function gettabledata()
 
     showanswers.map((a,i)=>{
     
-    // let trow = document.createElement("tr");
-    // let td = document.createElement("td");
-    // let td1 = document.createElement("td");
-    // let td2 = document.createElement("td");
-    // tablebody.appendChild(trow);
-    // trow.appendChild(td);
-    // trow.appendChild(td1);
-    // trow.appendChild(td2);
-
-     let trow = document.createElement("ol");
-    let td = document.createElement("li");
-    let td1 = document.createElement("li");
-    let td2 = document.createElement("li");
+    let trow = document.createElement("tr");
+    let td = document.createElement("td");
+    let td1 = document.createElement("td");
+    let td2 = document.createElement("td");
     tablebody.appendChild(trow);
     trow.appendChild(td);
     trow.appendChild(td1);
     trow.appendChild(td2);
 
-    td.innerHTML = `${a.question} <br> 1. ${a[1]} <br>  2. ${a[2]} <br>  3.${a[3]}`
+    //  let trow = document.createElement("ol");
+    // let td = document.createElement("li");
+    // let td1 = document.createElement("li");
+    // let td2 = document.createElement("li");
+    // tablebody.appendChild(trow);
+    // trow.appendChild(td);
+    // trow.appendChild(td1);
+    // trow.appendChild(td2);
+
+    td.innerHTML = `${a.question} `
     td1.innerHTML = a[correctansw[i]];
     td2.innerHTML = a[useranswers[i]]
     if(correctansw[i] != useranswers[i])
     {
-        trow.style.color = "red"
-        trow.style.borderLeft = "red 1px solid";
+        
+    }
+    else
+    {
+        trow.style.color = "#009879"
+        trow.style.borderLeft = "#009879 1px solid";
     }
 
     
     })
-    
 
+   
  
 
 

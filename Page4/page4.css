@@ -44,8 +44,8 @@ body
 }
 #qimg
 {
-   height: 100px;
-    width: 15%;
+   height: 150px;
+    width: 40%;
     margin-bottom: 40px;
 }
 #questionsdiv
@@ -209,6 +209,7 @@ body
     #username{
         font-size: 50px;
     }
+    
   }
   @media only screen and (max-width: 900px)
   {
@@ -232,5 +233,20 @@ body
     {
         width:200px;
     }
+    #qimg
+    {
+        width: 60%;
+    }
+
+  }
+
+  @media only screen and (max-width: 700px)
+  {
+      
+    #qimg
+    {
+        width: 70%;
+    }
+
 
   }
