@@ -282,7 +282,11 @@ function gettabledata()
     // trow.appendChild(td1);
     // trow.appendChild(td2);
 
+
     td.innerHTML = `${a.question} `
+
+ 
+
     td1.innerHTML = a[correctansw[i]];
     td2.innerHTML = a[useranswers[i]]
     if(correctansw[i] != useranswers[i])

@@ -14,8 +14,8 @@ function getinfofromlocal(){
     
     console.log(passsword.value);
 
-    // document.getElementById('twoT').style.display='';
-    // document.getElementById('two').style.display=''
+    document.getElementById('twoT').style.display='none';
+    document.getElementById('two').style.display='none'
     
     if(userinfoObj[0].password == passsword.value)
     {
@@ -30,13 +30,13 @@ function getinfofromlocal(){
 
     }else
     {
-        document.getElementById('twoT').style.display='inline';
+        document.getElementById('twoT').style.display='block';
         document.getElementById('two').style.display='block';
     }
     }
     else
     {
-        document.getElementById('oneO').style.display='inline';
+        document.getElementById('oneO').style.display='block';
         document.getElementById('one').style.display='block';
     }
 }

@@ -11,13 +11,23 @@
 	 background-color: #FDB827;
 	
  }
+ nav{
+	 background-color: white;
+	 display: flex;
+	 flex-wrap: wrap;
+	 flex-direction: column;
+ }
  #logotop
  {
+	margin-left: 2%;
+	margin-top: 0;
 	position: absolute;
-	left: 1%;
+	left: 0;
  }
+ 
  #regform
  {
+
 background-color: #F4F4F4;
 position: relative;
  width: 50%;
@@ -26,47 +36,31 @@ position: relative;
  flex-wrap: wrap;
  flex-direction: column;
  justify-content: center;
- margin-top:100px;
+ margin-top:40px;
  text-align: center;
  border-radius: 100px;
  box-shadow: 10px 10px 10px gray;
  align-items: center;
  justify-content: center;
+ width:35%;
  
  }
  .error-icon, .error-text{
 	 display: none;
-	 color: red;
-    margin: 0;
-    text-align: right;
-    padding: 0;
-    font-size: small;
-	font-style: italic;
- }
- .erro{
-	color: red;
-    margin: 0;
-    text-align: right;
-    padding: 0;
-    font-size: small;
-	font-style: italic;
- }
- 
- input, #i{
 	
-	 height: 40px;
-	 margin-bottom: 10px;
+ }
+
+ 
+ #i{
+	
+	 height: 30px;
 	 border-radius: 10px;
 	 border: 1.3px solid hsl(246, 25%, 77%);
-	 padding-left: 20px;
-	 outline: none;
-	 color: hsl(249, 10%, 26%);
-	 font-family: 'Poppins', sans-serif;
-	 font-size: 1.1rem;
-	 font-weight: 00;  
+	 
  }
  label{
 	 display: none;
+	 font-size: medium;
  }
 
  button{
@@ -78,27 +72,38 @@ position: relative;
 	 border: none;
 	 outline: none;
 	 font-size: 1.1rem;
-	 margin-bottom: 40px;
-	 margin-top: 20px;
+	 margin-bottom: 30px;
+	 margin-top:10px;
 
  }
  #piclogo{
-margin-top: 30px;
-width: 15%;
+height: 50px;
+margin-top: 10px;
+
 
  }
  #topic{
 	 display: block;
-	 font-size: large;
+	 font-size:medium;
 	 
 
  }
 .field-group{
 	 width: 100%;
+	 height:60px;
  }
  .inp{
+	
 	 width: 90%;
-	 height: 60px;
+	 height: 40px;
+	 height: 40px;
+	 border-radius: 10px;
+	 border: 1.3px solid hsl(246, 25%, 77%);
+	 padding-left: 20px;
+	 color: hsl(249, 10%, 26%);
+	 font-family: 'Poppins', sans-serif;
+	 font-size:15px;
+	 
  }
 
  #top{
@@ -108,9 +113,20 @@ width: 15%;
 	
  }
  #reg{
-	 font-size:xx-large;
+	 font-size:x-large;
  }
-
+ .error-icon{
+	position: relative;
+	top: -55%;
+	left:88%;
+} 
+.error-text{
+	position: relative;
+    top: -55%;
+    font-size: xx-small;
+    color: red;
+    font-style: italic;;
+}
 
  @media only screen and (max-width: 600px) {
 	#regform {

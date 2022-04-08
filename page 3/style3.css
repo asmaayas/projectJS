@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box;
+    font-family: 'Encode Sans', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
 }
 body
 {
@@ -13,10 +15,9 @@ body
 display: flex;
 flex-direction: column;
 justify-content: center;
-margin-top:150px;
+margin-top:50px;
 text-align: center;
-/* position: relative;
-right: 10%; */
+width: 60%;
 
 }
 .error-icon, .error-text{
@@ -25,20 +26,26 @@ right: 10%; */
 
 #piclogo {
 
-    /* display: flex;
+    display: flex;
     flex-direction: row;
-    justify-content: center; */
-    height: 125px;
-    width: 110%;
+    justify-content: center; 
+    height: 100px;
+    width: 15%;
+    position: relative;
+    left: 43%;
+    margin: 0;
            
+}
+.field-group{
+    height: 10%;
 }
 
 
     input {
     font-size: medium;
     line-height: 3;
-    width: 340px;
-    border: 1px solid orange;
+    width: 50%;
+    border: 1px solid #FDB827;
     text-align: center;
 }
 input::placeholder
@@ -47,17 +54,46 @@ input::placeholder
     color: rgba(0, 0, 0, 0.678);
 }
 button{
+  
     border: none;
-    background-color: orange;
+    background-color: #FDB827;
     height: 40px;
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
+    width: 30%;
     text-align: center; 
+    position: relative;
+    left:35%;
 }
-
-@media only screen and (max-width: 600px) {
-	#regform {
+#top{
+    color: #FDB827;
+    text-decoration: line-through;
+    
+   
+}
+.error-icon{
+    position: relative;
+    bottom: 60%;
+    left: 70%;
+}
+.error-text{
+    font-size: x-small;
+    color: red;
+    position: relative;
+    bottom: 60%;
+}
+@media only screen and (max-width: 700px) {
+	#loginForm {
 	  width: 90%;
 	}
+    #piclogo{
+        width: 30%;
+        left: 35%;
+    }
+    input{
+        width: 90%;
+        font-size: medium;
+    }
+    .error-icon{
+       
+        left:85%;
+    }
   }
