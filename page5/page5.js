@@ -291,7 +291,8 @@ function gettabledata()
     td2.innerHTML = a[useranswers[i]]
     if(correctansw[i] != useranswers[i])
     {
-        
+        trow.style.color = "red";
+        trow.style.borderLeft = "red 1px solid";
     }
     else
     {
